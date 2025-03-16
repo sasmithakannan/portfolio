@@ -2,9 +2,10 @@ import HiImg from '../assets/Hi.jpg';
 
 export default function Resume() {
 
+  // Function to download resume
   const downloadResume = () => {
     const link = document.createElement("a");
-    link.href = "/sasmi-resume.pdf"; // Ensure the file is in the `public` folder
+    link.href = process.env.PUBLIC_URL + "/sasmi-resume.pdf"; // Ensure the file is in the `public` folder
     link.download = "Sasmitha_K_Resume.pdf";
     document.body.appendChild(link);
     link.click();
@@ -43,4 +44,4 @@ export default function Resume() {
 
     </section>
   );
-}
+}   
