@@ -23,6 +23,7 @@ export default function About() {
             I’m always eager to learn, innovate, and contribute to impactful digital solutions. Feel free to check out my work on GitHub or
             connect with me on LinkedIn!
           </p>
+          
         </div>
       </div>
     </section>

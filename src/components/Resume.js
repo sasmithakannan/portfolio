@@ -1,6 +1,16 @@
 import HiImg from '../assets/Hi.jpg';
 
 export default function Resume() {
+
+  const downloadResume = () => {
+    const link = document.createElement("a");
+    link.href = "/sasmi-resume.pdf"; // Ensure the file is in the `public` folder
+    link.download = "Sasmitha_K_Resume.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <section id='resume' className="flex flex-col md:flex-row bg-secondary px-10 py-20 items-center">
       
@@ -20,13 +30,14 @@ export default function Resume() {
           <p className="text-lg text-gray-300 mb-6">
             View my resume and download it for reference.
           </p>
-          <a 
-            className="bg-blue-500 text-white px-6 py-3 font-bold rounded-lg shadow-md hover:bg-blue-600 hover:shadow-xl transition duration-300 flex justify-center items-center gap-2"
-            href="/sasmi-resume.pdf" 
-            download="Sasmitha_K_Resume.pdf"
+          
+          {/* Download Button */}
+          <button 
+            className="bg-blue-500 text-white px-6 py-3 font-bold rounded-lg shadow-md hover:bg-blue-600 hover:shadow-xl transition duration-300"
+            onClick={downloadResume}
           >
             📥 Download Resume
-          </a>
+          </button>
         </div>
       </div>
 
